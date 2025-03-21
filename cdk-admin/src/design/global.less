@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'AlibabaPuHuiTi';
+  src: url('@/assets/font/Alibaba_PuHuiTi_2.0_55_Regular_55_Regular.ttf') format('truetype');
+}
+
+@font-puhui-base: 'AlibabaPuHuiTi';
+
+html body {
+  background: #f5f5f5;
+  margin: 0px;
+}
+
+/* 选择滚动条 */
+::-webkit-scrollbar {
+  width: 8px; /* 滚动条宽度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background-color: @bg-color;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+
+/* 滚动条滑块悬停 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}

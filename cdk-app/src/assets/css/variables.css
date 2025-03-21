@@ -1,0 +1,21 @@
+:root, page {
+    --color-blue: #4867E3;
+    --color-purple: #C850C0;
+    --color-orange: #FFCC70;
+
+    /* 主要文字色 */
+    --font-color: #FFFFFF;
+    /* 辅助文字色 */
+    --font-secondary-color: #CCCCCC;
+    /* 提示文字色 */
+    --font-tip-color: #666666;
+    /* 禁用文字色 */
+    --font-disable-color: #999999;
+
+    /* 页面背景色 */
+    --bg-color: #383838;
+    /* 一级框架背景色 */
+    --bg-layer-1: #2A3039;
+    /* 二级框架背景色 */
+    --bg-layer-2: #2F3947;
+}

@@ -1,0 +1,87 @@
+html[data-theme='light'] {
+  // ant layout
+  .ant-layout {
+    &-footer {
+      background-color: @bg-color;
+      color: @text-color;
+    }
+  }
+}
+
+[data-theme='dark'] {
+  body {
+    background-color: #000;
+    color: @text-color;
+  }
+
+  // ant layout
+  .ant-layout {
+    background: @dark-color;
+    &-footer {
+      background-color: @bg-color;
+      color: @text-color;
+    }
+  }
+
+  // ant-menu dark mode
+  .ant-menu {
+    background-color: @bg-color;
+    color: @text-color;
+    font-family: @font-puhui-base;
+    // sub menu 
+    &-submenu {
+      &-title {
+        &:hover {
+          color: @primary-color-light;
+        }
+      }
+      .ant-menu-item {
+        &:hover {
+          color: @primary-color-light;
+        }
+      }
+    }
+    // active sub menu
+    &-submenu-selected {
+      .ant-menu-submenu-title {
+        color: @white;
+        &:hover {
+          color: @primary-color-light;
+        }
+      }
+    }
+
+    // menu item
+    &-item {
+      &:hover {
+        color: @primary-color-light;
+      }
+      &:where(.ant-menu-item-selected) {
+        color: @white;
+        background: @primary-color;
+        &:hover {
+          color: @primary-color-light;
+        }
+      }
+    }
+  }
+
+  // ant form
+  .ant-form {
+    &-item {
+      &-label > label {
+        font-family: @font-puhui-base;
+        color: @text-color;
+      }
+    }
+  }
+
+  // ant select
+  .ant-input {
+    background: @input-bg-color;
+    border: @input-bg-color;
+    &::placeholder {
+      color: @text-color;
+    }
+  }
+}

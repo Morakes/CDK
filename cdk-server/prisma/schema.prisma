@@ -1,0 +1,65 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// 游戏模型
+model Game {
+  id        Int      @id @default(autoincrement())
+  name      String   // 游戏名称
+  cover     String   // 游戏封面URL
+  cdkList   CDK[]    @relation("GameToCDK") // 关联的兑换码列表
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 兑换码模型
+model CDK {
+  id        Int      @id @default(autoincrement())
+  title     String   // 兑换码标题
+  code      String   // 兑换码
+  reward    String   // 奖励内容
+  isValid   Boolean  @default(true) // 是否有效
+  endTime   DateTime // 截止日期
+  game      Game     @relation("GameToCDK", fields: [gameId], references: [id])
+  gameId    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([gameId])
+}
+
+// 轮播图模型
+model Banner {
+  id        Int      @id @default(autoincrement())
+  imageUrl  String   // 图片URL
+  link      String?  // 跳转链接
+  order     Int      @default(0) // 排序
+  isActive  Boolean  @default(true) // 是否启用
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 背景图模型
+model Background {
+  id        Int      @id @default(autoincrement())
+  imageUrl  String   // 图片URL
+  isActive  Boolean  @default(true) // 是否启用
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 微信用户模型
+model WechatUser {
+  id         Int      @id @default(autoincrement())
+  openid     String   @unique
+  sessionKey String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}

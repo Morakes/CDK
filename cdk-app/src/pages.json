@@ -1,0 +1,65 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+			"^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+	        "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
+		}
+	},
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "GameCode宝库",
+				"navigationBarBackgroundColor": "#22272E",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/personal-center/personal-center",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/game-cdk/game-cdk",
+			"style": {
+				"navigationBarTitleText": "兑换码中心",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/game-search/game-search",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"tabBar": {
+    "list": [
+		{
+			"pagePath": "pages/index/index",
+			"text": "CDK",
+			"iconPath": "static/tabbar-cdk.png",
+			"selectedIconPath": "static/tabbar-cdk.png"
+		},
+		{
+			"pagePath": "pages/personal-center/personal-center",
+			"text": "我的",
+			"iconPath": "static/tabbar-user-center.png",
+			"selectedIconPath": "static/tabbar-user-center.png"
+		}
+		],
+		"color": "#CCCCCC",
+		"selectedColor": "#FFFFFF",
+		"backgroundColor": "#22272E",
+		"borderStyle": "white"
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#22272E",
+		"backgroundColor": "#22272E"
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "components.d.ts", "types/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@public/*":["../public/*"]
+    },
+    "preserveValueImports":false,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "noImplicitAny": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "lib": ["dom", "ESNext"]
+  },
+  "files": [],
+}
